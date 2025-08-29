@@ -1,0 +1,50 @@
+[
+  {
+    "id": "card1",
+    "title": "Understanding Our Git Workflow",
+    "summary": "Learn how we manage code changes and collaborate using Git branching strategies",
+    "keyTakeaways": [
+      "We use feature branches for all new work",
+      "Pull requests require at least 2 reviewers",
+      "Main branch is protected and auto-deployed"
+    ],
+    "quiz": {
+      "question": "How many reviewers are required for a pull request?",
+      "options": ["1", "2", "3", "No requirement"],
+      "answer": "2"
+    },
+    "explainLikeIm5": "Think of Git like a shared notebook. Everyone writes on their own pages (branches), then asks friends to check their work (pull requests) before adding it to the main story (main branch)."
+  },
+  {
+    "id": "card2", 
+    "title": "Our Design System Principles",
+    "summary": "Key principles behind our design system and how to use components effectively",
+    "keyTakeaways": [
+      "Consistency is key - always use existing components first",
+      "Follow the 8px grid system for spacing",
+      "Colors have semantic meaning - use design tokens"
+    ],
+    "quiz": {
+      "question": "What grid system do we use for spacing?",
+      "options": ["4px", "8px", "12px", "16px"],
+      "answer": "8px"
+    },
+    "explainLikeIm5": "Imagine building with LEGO blocks. Our design system gives you pre-made blocks (components) that fit together perfectly. You don't need to create new blocks - just use the ones we have!"
+  },
+  {
+    "id": "card3",
+    "title": "Security Best Practices", 
+    "summary": "Essential security practices every team member should follow",
+    "keyTakeaways": [
+      "Never commit API keys or secrets to code",
+      "Use strong, unique passwords with 2FA",
+      "Keep dependencies updated and scan for vulnerabilities"
+    ],
+    "quiz": {
+      "question": "What should you do with API keys in your code?",
+      "options": ["Commit them to Git", "Put them in environment variables", "Share them in Slack", "Hard-code them"],
+      "answer": "Put them in environment variables"
+    },
+    "explainLikeIm5": "Security is like protecting your house. You wouldn't leave your keys lying around or give copies to strangers. Same with code - keep secrets safe and doors locked!"
+  }
+]

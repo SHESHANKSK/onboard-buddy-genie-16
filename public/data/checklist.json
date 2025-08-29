@@ -1,0 +1,10 @@
+[
+  {"id": "task1", "title": "Setup company email", "description": "Configure your company email account and test connectivity", "done": true, "category": "Setup"},
+  {"id": "task2", "title": "Join team Slack channels", "description": "Join #general, #engineering, and your team-specific channels", "done": true, "category": "Communication"},
+  {"id": "task3", "title": "Complete security training", "description": "Complete mandatory security awareness training", "done": false, "category": "Training"},
+  {"id": "task4", "title": "Set up development environment", "description": "Install required tools and clone repositories", "done": false, "category": "Setup"},
+  {"id": "task5", "title": "Schedule 1:1s with team members", "description": "Meet your immediate team members and key stakeholders", "done": false, "category": "Social"},
+  {"id": "task6", "title": "Review engineering handbook", "description": "Read through engineering practices and standards", "done": false, "category": "Learning"},
+  {"id": "task7", "title": "Set up Jira access", "description": "Get access to project management tools", "done": false, "category": "Setup"},
+  {"id": "task8", "title": "Complete first small task", "description": "Take on your first development task", "done": false, "category": "Work"}
+]

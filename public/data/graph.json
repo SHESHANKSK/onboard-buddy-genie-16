@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {"id": "1", "label": "Sarah Chen", "type": "Person", "team": "Engineering", "role": "Engineering Manager", "email": "sarah.chen@company.com", "department": "Product"},
+    {"id": "2", "label": "Alex Rivera", "type": "Person", "team": "Engineering", "role": "Senior Frontend Developer", "email": "alex.rivera@company.com", "department": "Product"},
+    {"id": "3", "label": "Maya Patel", "type": "Person", "team": "Engineering", "role": "Backend Developer", "email": "maya.patel@company.com", "department": "Product"},
+    {"id": "4", "label": "Jordan Kim", "type": "Person", "team": "Design", "role": "Product Designer", "email": "jordan.kim@company.com", "department": "Product"},
+    {"id": "5", "label": "DevOps Pipeline", "type": "Tool", "description": "CI/CD pipeline for automated deployments", "url": "https://jenkins.company.com"},
+    {"id": "6", "label": "Slack", "type": "Tool", "description": "Team communication platform", "url": "https://company.slack.com"},
+    {"id": "7", "label": "Jira", "type": "Tool", "description": "Project management and issue tracking", "url": "https://company.atlassian.net"},
+    {"id": "8", "label": "Engineering Handbook", "type": "Doc", "description": "Complete guide to engineering practices", "url": "/docs/engineering-handbook.md"},
+    {"id": "9", "label": "Design System", "type": "Doc", "description": "UI components and design guidelines", "url": "/docs/design-system.md"},
+    {"id": "10", "label": "Onboarding Checklist", "type": "Doc", "description": "Your first week tasks and setup", "url": "/docs/onboarding.md"}
+  ],
+  "edges": [
+    {"source": "1", "target": "2", "relation": "manages"},
+    {"source": "1", "target": "3", "relation": "manages"},
+    {"source": "1", "target": "4", "relation": "collaborates_with"},
+    {"source": "2", "target": "5", "relation": "uses"},
+    {"source": "3", "target": "5", "relation": "uses"},
+    {"source": "2", "target": "6", "relation": "uses"},
+    {"source": "3", "target": "6", "relation": "uses"},
+    {"source": "4", "target": "6", "relation": "uses"},
+    {"source": "1", "target": "7", "relation": "uses"},
+    {"source": "2", "target": "8", "relation": "references"},
+    {"source": "3", "target": "8", "relation": "references"},
+    {"source": "4", "target": "9", "relation": "maintains"},
+    {"source": "10", "target": "8", "relation": "links_to"},
+    {"source": "10", "target": "9", "relation": "links_to"}
+  ]
+}
