@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 9%;
 
-    --primary: 217 91% 60%;
+    --primary: 0 85% 47%; /* Société Générale Red #E30613 */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 240 5% 96%;
-    --secondary-foreground: 240 6% 10%;
+    --secondary-foreground: 0 0% 0%; /* Black text */
 
     --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
+    --muted-foreground: 0 0% 67%; /* Gray #A7A9AC */
 
-    --accent: 142 76% 36%;
+    --accent: 0 0% 0%; /* Black accent */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
