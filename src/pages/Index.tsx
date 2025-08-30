@@ -7,6 +7,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Users, BookOpen, Rocket, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
+import AuthStatus from '@/components/AuthStatus';
 
 interface ChecklistItem {
   id: string;
@@ -56,11 +57,19 @@ const Index = () => {
       target: "/learn",
       icon: BookOpen,
       color: "accent"
+    },
+    {
+      label: "Employee Portal",
+      description: "Access task dashboard",
+      target: "/login",
+      icon: Rocket,
+      color: "primary"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary p-4">
+      <AuthStatus />
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Welcome Header */}
         <motion.div
@@ -121,7 +130,7 @@ const Index = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-3 gap-4">
                 {quickLinks.map((link, index) => (
                   <Link key={index} to={link.target}>
                     <Card className="hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-pointer bg-gradient-to-br from-card to-card/50">

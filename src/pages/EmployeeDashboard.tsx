@@ -7,8 +7,9 @@ import { useAuth } from '@/contexts/AuthContext';
 import { getTasksForEmployee, updateTaskStatus } from '@/utils/taskStorage';
 import { Task } from '@/types/Task';
 import { motion } from 'framer-motion';
-import { CheckCircle, Clock, MessageSquare, BookOpen, LogOut } from 'lucide-react';
-import WebLLMChatbot from './WebLLMChatbot';
+import { CheckCircle, Clock, MessageSquare, BookOpen, LogOut, ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import WebLLMChatbot from '@/components/WebLLMChatbot';
 
 const EmployeeDashboard = () => {
   const { user, logout } = useAuth();
@@ -42,9 +43,17 @@ const EmployeeDashboard = () => {
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
-            <div>
-              <h1 className="text-2xl font-bold text-primary">Société Générale</h1>
-              <p className="text-muted-foreground">Welcome, {user?.username}</p>
+            <div className="flex items-center gap-4">
+              <Button asChild variant="ghost" size="sm">
+                <Link to="/">
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to Onboarding
+                </Link>
+              </Button>
+              <div>
+                <h1 className="text-2xl font-bold text-primary">Société Générale</h1>
+                <p className="text-muted-foreground">Welcome, {user?.username}</p>
+              </div>
             </div>
             <Button onClick={logout} variant="outline" size="sm">
               <LogOut className="w-4 h-4 mr-2" />
@@ -108,9 +117,11 @@ const EmployeeDashboard = () => {
                   <MessageSquare className="w-4 h-4 mr-2" />
                   Ask AI Assistant
                 </Button>
-                <Button variant="outline" className="w-full justify-start">
-                  <BookOpen className="w-4 h-4 mr-2" />
-                  Learning Modules
+                <Button asChild variant="outline" className="w-full justify-start">
+                  <Link to="/learn">
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    Learning Modules
+                  </Link>
                 </Button>
               </CardContent>
             </Card>

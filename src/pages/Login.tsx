@@ -6,8 +6,10 @@ import { Label } from '@/components/ui/label';
 import { useAuth } from '@/contexts/AuthContext';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { motion } from 'framer-motion';
+import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const LoginForm = () => {
+const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -33,6 +35,14 @@ const LoginForm = () => {
       >
         <Card className="shadow-lg">
           <CardHeader className="text-center">
+            <div className="flex items-center justify-center mb-4">
+              <Button asChild variant="ghost" size="sm">
+                <Link to="/">
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to Onboarding
+                </Link>
+              </Button>
+            </div>
             <CardTitle className="text-3xl font-bold text-primary mb-2">
               Société Générale
             </CardTitle>
@@ -91,4 +101,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default Login;
